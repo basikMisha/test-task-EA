@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script defer src="./src/js/countdown.js"></script>
+    <script defer src="./src/js/ajax.js"></script>
+    <script defer src="./src/js/accordion.js"></script>
+    <title>LEAD Advisors</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__decor-left dec-lg">
+                <img src="./src/img/decoration-left.svg" alt="left decoration">
+            </div>
+            <div class="header__decor-left dec-md">
+                <img src="./src/img/decoration-left-md.svg" alt="left decoration">
+            </div>
+            <div class="header__decor-left dec-sm">
+                <img src="./src/img/decoration-left-sm.svg" alt="left decoration">
+            </div>
+            <a href="index.html" class="header__logo">
+                <img class="header__logo-img logo-desk" src="./src/img/logo.svg" alt="LEAD Advisors logo">
+                <img class="header__logo-img logo-mob" src="./src/img/logo-mob.svg" alt="LEAD Advisors logo">
+            </a>
+            <div class="header__decor-right dec-lg">
+                <img src="./src/img/decoration-right.svg" alt="right decoration">
+            </div>
+            <div class="header__decor-right dec-md">
+                <img src="./src/img/decoration-right-md.svg" alt="right decoration">
+            </div>
+            <div class="header__decor-right dec-sm">
+                <img src="./src/img/decoration-right-sm.svg" alt="right decoration">
+            </div>
+        </header>
+        <main class="main">
+            <div class="promo">
+                <h1 class="promo__title">Under Construction</h1>
+                <p class="promo__subtitle promo__text">We're making lots of improvements and will be back soon</p>
+                <div class="countdown">
+                    <div class="countdown__items">
+                        <div class="countdown__item">
+                            <span id="days" class="countdown__item-date item__days"></span>
+                            <span></span>
+                            <img class="countdown__item-img days-desk" src="./src/img/days-desk.png" alt="days" >
+                            <img class="countdown__item-img days-mob" src="./src/img/days-mob.png" alt="days" >
+                        </div>
+                        <div class="countdown__item">
+                            <span id="hours" class="countdown__item-date items__hours"></span>
+                            <img class="countdown__item-img hours-desk" src="./src/img/hours-desk.png" alt="hours" >
+                            <img class="countdown__item-img hours-mob" src="./src/img/hours-mob.png" alt="hours" >
+                        </div>
+                        <div class="countdown__item">
+                            <span id="minutes" class="countdown__item-date item__minutes"></span>
+                            <img class="countdown__item-img min-desk" src="./src/img/min-desk.png" alt="minutes" >
+                            <img class="countdown__item-img min-mob" src="./src/img/min-mob.png" alt="minutes" >
+                        </div>
+                        <div class="countdown__item">
+                            <span id="seconds" class="countdown__item-date items__seconds"></span>
+                            <img class="countdown__item-img sec-desk" src="./src/img/sec-desk.png" alt="seconds">
+                            <img class="countdown__item-img sec-mob" src="./src/img/sec-mob.png" alt="seconds">
+                        </div>
+                    </div>
+                </div>
+                <div class="promo__event">
+                    <p class="promo__event-text promo__text">Check our event page when you wait:</p>
+                    <a target="_blank" href="https://ru.wikipedia.org/wiki/HTML" class="promo__link">
+                        <span class="promo__link-text">Go to the event</span>
+                        <img src="./src/img/arrow-right.svg" alt="arrow right" class="promo__link-img">
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="form__wrapper">
+                <div class="modals">
+                    <dialog class="modal__success modal">
+                        <button class="modal__close-btn" data-close-btn><img src="./src/img/close-btn.svg" alt="close button"
+                                class="modal__close-img"></button>
+                        <span class="modal__title">SUCCESS!</span>
+                        <p class="modal__text">You have successfully subscribed to the email newsletter</p>
+                        <button class="modal__close" data-close-btn><span>Close</span></button>
+                    </dialog>
+                </div>
+                <form id="form" name="subscription" class="form"> 
+                    <input name="mail" class="form__input" placeholder="Enter your Email and get notified" type="email">
+                    <button class="form__btn" type="submit">
+                        <img src="./src/img/arrow-right.svg" alt="right arrow">
+                    </button>
+                </form>
+            </div>
+            <button id="other-btn" class="other__btn">
+                <span>Other Events</span>
+                <img src="./src/img/arrow-down.svg" alt="arrow down">
+            </button>
+        </footer>
+
+        <div class="all-events">
+            <div class="container">
+                <h2 class="all-events__caption">All events</h2>
+                <div class="panel-container">
+                    <div class="panel active" style="background-image: url('./src/img/acc-img.jpg')">
+                        <div class="panel__overlay">
+                            <div class="panel__caption">
+                                <h2 class="panel__caption-title">Hawaiian party</h2>
+                                <span class="panel__caption-num">01</span>
+                            </div>
+                            <div class="panel__content">
+                                <h4 class="content__title">Hawaiian party</h4>
+                                <time class="content__date" datetime="2023-02-13">13.02.2023</time>
+                                <a href="#" class="content__link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel" style="background-image: url('./src/img/acc-img.jpg')">
+                        <div class="panel__overlay">
+                            <div class="panel__caption">
+                                <h2 class="panel__caption-title">Hawaiian party</h2>
+                                <span class="panel__caption-num">01</span>
+                            </div>
+                            <div class="panel__content">
+                                <h4 class="content__title">Hawaiian party</h4>
+                                <time class="content__date" datetime="2023-02-13">13.02.2023</time>
+                                <a href="#" class="content__link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel" style="background-image: url('./src/img/acc-img.jpg')">
+                        <div class="panel__overlay">
+                            <div class="panel__caption">
+                                <h2 class="panel__caption-title">Hawaiian party</h2>
+                                <span class="panel__caption-num">01</span>
+                            </div>
+                            <div class="panel__content">
+                                <h4 class="content__title">Hawaiian party</h4>
+                                <time class="content__date" datetime="2023-02-13">13.02.2023</time>
+                                <a href="#" class="content__link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel" style="background-image: url('./src/img/acc-img.jpg')">
+                        <div class="panel__overlay">
+                            <div class="panel__caption">
+                                <h2 class="panel__caption-title">Hawaiian party</h2>
+                                <span class="panel__caption-num">01</span>
+                            </div>
+                            <div class="panel__content">
+                                <h4 class="content__title">Hawaiian party</h4>
+                                <time class="content__date" datetime="2023-02-13">13.02.2023</time>
+                                <a href="#" class="content__link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel" style="background-image: url('./src/img/acc-img.jpg')">
+                        <div class="panel__overlay">
+                            <div class="panel__caption">
+                                <h2 class="panel__caption-title">Hawaiian party</h2>
+                                <span class="panel__caption-num">01</span>
+                            </div>
+                            <div class="panel__content">
+                                <h4 class="content__title">Hawaiian party</h4>
+                                <time class="content__date" datetime="2023-02-13">13.02.2023</time>
+                                <a href="#" class="content__link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel" style="background-image: url('./src/img/acc-img.jpg')">
+                        <div class="panel__overlay">
+                            <div class="panel__caption">
+                                <h2 class="panel__caption-title">Hawaiian party</h2>
+                                <span class="panel__caption-num">01</span>
+                            </div>
+                            <div class="panel__content">
+                                <h4 class="content__title">Hawaiian party</h4>
+                                <time class="content__date" datetime="2023-02-13">13.02.2023</time>
+                                <a href="#" class="content__link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel" style="background-image: url('./src/img/acc-img.jpg')">
+                        <div class="panel__overlay">
+                            <div class="panel__caption">
+                                <h2 class="panel__caption-title">Hawaiian party</h2>
+                                <span class="panel__caption-num">01</span>
+                            </div>
+                            <div class="panel__content">
+                                <h4 class="content__title">Hawaiian party</h4>
+                                <time class="content__date" datetime="2023-02-13">13.02.2023</time>
+                                <a href="#" class="content__link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel" style="background-image:  url('./src/img/acc-img.jpg')">
+                        <div class="panel__overlay">
+                            <div class="panel__caption">
+                                <h2 class="panel__caption-title">Hawaiian party</h2>
+                                <span class="panel__caption-num">01</span>
+                            </div>
+                            <div class="panel__content">
+                                <h4 class="content__title">Hawaiian party</h4>
+                                <time class="content__date" datetime="2023-02-13">13.02.2023</time>
+                                <a href="#" class="content__link">More information</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
